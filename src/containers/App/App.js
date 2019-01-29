@@ -21,20 +21,17 @@ class App extends Component {
 
 
     createSquares() {
-        const copy = this.state;
+        let copy = this.state;
         for (let i = 0; i < 36; i++) {
+
             copy.smallSquare.push({id: i, squareClass: 'small_div', prize: '', hideClass: ''});
+            this.setState({smallSquare: copy.smallSquare})
         }
         const rand = Math.round(Math.random() * 36);
         copy.hiddenId = rand;
         copy.smallSquare[rand].hideClass = 'hide';
         this.setState({copy});
         console.log(copy.hiddenId)
-    }
-
-    async waitRender() {
-        await this.render;
-        await this.createSquares();
     }
 
     gameReset() {
@@ -68,7 +65,7 @@ class App extends Component {
 
     render() {
         if (this.state.smallSquare.length === 0) {
-            this.waitRender();
+            this.createSquares();
         }
 
         return (

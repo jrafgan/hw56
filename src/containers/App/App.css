@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  margin-top: 50px;
+}
+
+.square_div {
+  border: 1px solid lightslategrey;
+  display: grid;
+  grid-template-columns: repeat(6, 35px);
+  grid-template-rows: repeat(6, 35px);
+  grid-gap: 5px 5px;
+  padding: 5px;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.small_div,
+.toggle_div{
+  border: 1px solid blue;
+  justify-self: center;
+  width: 35px;
+  height: 35px;
+  background: darkcyan;
+  border-radius: 5px;
+}
+
+
+.toggle_div {
+  background: transparent;
+}
+
+.hide {
+  color: transparent;
+}
+
+.show {
+  color: red;
+  font-weight: 900;
+}
+
+.part1 {
+  color: red;
+  height: 75px;
+}
+
+.tries ,
+.reset_button,
+.score,
+.total_score {
+  padding: 5px;
+}
+
+.score {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.score,
+.total_score {
+  background: dodgerblue;
+}
+
+
+
